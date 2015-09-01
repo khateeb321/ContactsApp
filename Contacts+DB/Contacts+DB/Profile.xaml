@@ -1,0 +1,49 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Contacts_DB.Profile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Border Margin="10,24,0,503" BorderBrush="Red" BorderThickness="2">
+                <Image x:Name="pic" Margin="-2,2,2,-2"  Stretch="UniformToFill"/>
+            </Border>
+            <Rectangle Fill="Black" HorizontalAlignment="Left" Height="241" Margin="10,24,0,0" Stroke="Blue" Opacity="0.5" VerticalAlignment="Top" Width="436"/>
+            <Border x:Name="b1" CornerRadius="128" Margin="119,156,118,396" BorderBrush="Red" BorderThickness="2">
+                <Border.Background>
+                    <ImageBrush ImageSource="{Binding Path=Source, ElementName=pic}"/>
+                </Border.Background>
+            </Border>
+
+            <TextBlock Text="this is test" x:Name="tb_name" Margin="33,561,172,172"/>
+            <TextBlock Text="this is test" x:Name="tb_number" Margin="33,596,172,137"/>
+            <TextBlock Text="this is test" x:Name="tb_email" Margin="33,631,172,103"/>
+            <TextBlock Text="this is test" x:Name="tb_address" Margin="33,665,172,69"/>
+            <TextBlock Text="this is test" x:Name="tb_website" Margin="33,699,172,35"/>
+            <Button Content="Call" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="289,552,0,0" Width="167" Click="Button_Click"/>
+            <Button Content="Msg" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="289,608,0,0" Width="167" Click="Button_Click_1"/>
+            <Button Content="Email" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="289,665,0,0" Width="167" Click="Button_Click_2"/>
+
+
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
